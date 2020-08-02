@@ -1,0 +1,20 @@
+<form class="example-form" [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" >
+    <mat-form-field class="example-full-width">
+      <mat-label>Text</mat-label>
+      <textarea matInput placeholder="Enter text to match" formControlName="text"></textarea>
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Substring</mat-label>
+      <textarea matInput placeholder="Enter substring to match"  formControlName="substring"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Search</button>
+
+</form>
+
+Text Found at following locations
+<ul>
+<li *ngFor="let poistion of subStringPoistions">{{poistion}}</li>
+
+</ul>
